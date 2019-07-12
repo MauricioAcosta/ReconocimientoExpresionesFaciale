@@ -36,6 +36,12 @@ def train_data_loader():
 def testing_data():
     test_data = []
     for img in tqdm(os.listdir(TEST_DIR)):
-        #img_labels
-        pass
+        img_labels = img.split(".")[0]
+        path_to_img = os.path.join(TEST_DIR, img)
+        img = cv2.resize(cv2.imread(path_to_img, cv2.IMREAD_GRAYSCALE),(IMAGE_SIZE, IMAGE_SIZE))
+        test_data.append([np.array(img), np.array(img_labels)])
+
+    shuffle(test_data)
+    np.save("test_dataone.npy", test_data)
+    return test_data
 
