@@ -102,4 +102,13 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-env/
+.idea/
+.vscode/
+log/
+checkpoint
+hapiness-0.001-6convfire.model.data-00000-of-00001
+hapiness-0.001-6convfire.model.index
+hapiness-0.001-6convfire.model.meta
+test_dataone.npy
+training_data_new.npy
+originalImages/
